@@ -1,0 +1,20 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-todo-ui
+spec:
+  replicas: {{ .Values.ui.replicas }}
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}-todo-ui
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}-todo-ui
+    spec:
+      containers:
+      - name: {{ .Release.Name }}-todo-ui
+        image: "kiondevacr12345.azurecr.io/v4"
+        ports:
+        - containerPort: {{ .Values.ui.port }}
