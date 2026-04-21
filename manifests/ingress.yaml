@@ -3,9 +3,9 @@ kind: Ingress
 metadata:
   name: todo-ui-ingress
 spec:
-  ingressClassName: azure-application-gateway
+  ingressClassName: ingress
   rules:
-  - host: ui.jhandu.shop
+  - host: ui.manpura.shop
     http:
       paths:
       - pathType: Prefix
@@ -14,4 +14,4 @@ spec:
           service:
             name: todo-ui
             port: 
-              number: 80
+              number: 3000
