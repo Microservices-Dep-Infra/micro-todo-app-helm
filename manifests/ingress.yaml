@@ -1,17 +1,17 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: todo-ui-ingress
+  name: {{ .Release.Name }}-todo-ui-ingress
 spec:
-  ingressClassName: ingress
+  ingressClassName: {{ .Values.common.ingressClass }}
   rules:
-  - host: ui.manpura.shop
+  - host: {{ .Values.ui.ingress.host }}
     http:
       paths:
       - pathType: Prefix
         path: "/"
         backend:
           service:
-            name: todo-ui
+            name: {{ .Release.Name }}-todo-ui-svc
             port: 
-              number: 3000
+              number: {{ .Values.ui.port }}

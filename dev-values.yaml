@@ -1,3 +1,6 @@
+common:
+  containerRegistryURL: devopsinsidersacr235.azurecr.io
+  ingressClass: ingress
   
 ui:
   replicas: 2
@@ -7,6 +10,5 @@ ui:
   port: 80
   ServicePort: 80
   ingress:
-    host: dev-ui.manpura.shop
-  ingressClassName: Ingress
-  
+    host: dev-ui.jhandu.shop
+
