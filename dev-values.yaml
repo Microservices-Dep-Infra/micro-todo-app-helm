@@ -1,6 +1,6 @@
 common:
   containerRegistryURL: kiondevacr12345.azurecr.io/todo-ui:v4
-  ingressClassName: nginx
+  ingressClass: nginx
   
 ui:
   replicas: 2
