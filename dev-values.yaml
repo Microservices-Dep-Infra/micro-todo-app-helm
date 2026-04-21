@@ -1,5 +1,5 @@
 common:
-  containerRegistryURL: devopsinsidersacr235.azurecr.io
+  containerRegistryURL: kiondevacr12345.azurecr.io/todo-ui:v4
   ingressClass: ingress
   
 ui:
